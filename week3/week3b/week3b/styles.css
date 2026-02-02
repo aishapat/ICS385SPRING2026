@@ -1,0 +1,54 @@
+/* ===== BODY ===== */
+body {
+  text-align: center;
+  background-color: #011F3F; /* Dark blue background */
+  font-family: 'Press Start 2P', cursive;
+  color: #ffffff;
+}
+
+/* ===== LEVEL TITLE ===== */
+#level-title {
+  font-size: 2rem;
+  margin-top: 30px;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  margin-top: 50px;
+}
+
+/* ===== ROW ===== */
+.row {
+  margin-bottom: 20px;
+}
+
+/* ===== BUTTONS ===== */
+.btn {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px #666;
+  transition: all 0.2s;
+}
+
+/* Press effect */
+.btn:active {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}
+
+/* Individual colors */
+.green { background-color: #00ff00; }
+.red { background-color: #ff0000; }
+.yellow { background-color: #ffff00; }
+.blue { background-color: #0000ff; }
+
+/* Pressed animation from JS animatePress */
+.pressed {
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+  opacity: 0.7;
+}

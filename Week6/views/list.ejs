@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1 { color: #333; }
+    ul { list-style-type: disc; margin-left: 20px; }
+  </style>
+</head>
+<body>
+  <h1><%= title %></h1>
+  <ul>
+    <% items.forEach(function(item) { %>
+      <li><%= item %></li>
+    <% }); %>
+  </ul>
+</body>
+</html>

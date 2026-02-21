@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>UHMC Course Generator</title>
+  <link rel="stylesheet" href="/main.css"> <!-- Step 3: link CSS -->
+</head>
+<body>
+  <main>
+    <h1>
+      <% if (courseID && courseName) { %>
+        <%= courseID %> - <%= courseName %>
+      <% } else { %>
+        Click "Generate Course" to get a random UHMC course
+      <% } %>
+    </h1>
+
+    <form action="/submit" method="POST">
+      <input type="submit" value="Generate Course">
+    </form>
+  </main>
+
+  <footer>
+    &copy; <%= new Date().getFullYear() %> UHMC
+  </footer>
+</body>
+</html>

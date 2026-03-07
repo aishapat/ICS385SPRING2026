@@ -1,0 +1,141 @@
+
+/* styles.css */
+/* Week 8a - ICS385 Course Catalog Styling */
+
+/* --- Global Styles --- */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    margin: 0.5em 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* --- Search Input --- */
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* --- Course Cards --- */
+#coursesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    padding: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.course-card h3 {
+    font-size: 18px;
+    color: #1a1a1a;
+}
+
+.course-card p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+/* --- Enrollment Status Colors --- */
+.open {
+    color: green;
+    font-weight: bold;
+}
+
+.filling {
+    color: orange;
+    font-weight: bold;
+}
+
+.full {
+    color: red;
+    font-weight: bold;
+}
+
+/* --- Topics / Tags --- */
+.topics {
+    margin-top: 10px;
+}
+
+.topic-tag {
+    display: inline-block;
+    background-color: #e0e0e0;
+    color: #333;
+    padding: 3px 7px;
+    margin: 2px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+/* --- Buttons --- */
+button {
+    padding: 8px 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077cc;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
+/* --- No Results Message --- */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    #coursesContainer {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+
+    #searchInput {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-card {
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

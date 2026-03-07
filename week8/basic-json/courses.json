@@ -1,0 +1,104 @@
+
+{
+    "university": "University of Hawaii Maui College",
+    "semester": "Spring 2026",
+    "lastUpdated": "2026-03-03",
+    "departments": [
+      {
+        "code": "ICS",
+        "name": "Information and Computer Sciences",
+        "chair": "Dr. Jane Smith",
+        "courses": [
+          {
+            "courseCode": "ICS 385",
+            "title": "Web Development and Administration",
+            "credits": 3,
+            "description": "Detailed knowledge of web page authoring and server-side programming.",
+            "prerequisites": ["ICS 320"],
+            "instructor": {
+              "name": "Dr. Debasis Bhattacharya",
+              "email": "debasisb@hawaii.edu",
+              "office": "Kaaike 114"
+            },
+            "schedule": {
+              "days": ["Tuesday"],
+              "time": "4:30 PM - 5:45 PM",
+              "location": "Online (Zoom)",
+              "capacity": 25,
+              "enrolled": 18
+            },
+            "isActive": true,
+            "topics": ["HTML", "CSS", "JavaScript", "Node.js", "APIs", "React"],
+            "assignments": [
+              {"name": "Week 1 - Setup", "points": 1, "dueDate": "2026-01-19"},
+              {"name": "Week 2 - HTML/CSS", "points": 3, "dueDate": "2026-01-26"}
+            ]
+          }
+        ]
+      },
+      {
+        "code": "MATH",
+        "name": "Mathematics",
+        "chair": "Dr. Robert Johnson",
+        "courses": [
+          {
+            "courseCode": "MATH 140",
+            "title": "Calculus I",
+            "credits": 4,
+            "description": "Introduction to differential and integral calculus.",
+            "prerequisites": [],
+            "instructor": {
+              "name": "Dr. Alice Wong",
+              "email": "alicew@hawaii.edu",
+              "office": "Kaaike 210"
+            },
+            "schedule": {
+              "days": ["Monday", "Wednesday", "Friday"],
+              "time": "10:00 AM - 10:50 AM",
+              "location": "Room 101",
+              "capacity": 30,
+              "enrolled": 28
+            },
+            "isActive": true,
+            "topics": ["Limits", "Derivatives", "Integrals"],
+            "assignments": [
+              {"name": "Homework 1", "points": 5, "dueDate": "2026-01-20"},
+              {"name": "Homework 2", "points": 5, "dueDate": "2026-01-27"}
+            ]
+          }
+        ]
+      },
+      {
+        "code": "BUS",
+        "name": "Business",
+        "chair": "Dr. Michael Lee",
+        "courses": [
+          {
+            "courseCode": "BUS 320",
+            "title": "Management",
+            "credits": 3,
+            "description": "Principles of management and organizational behavior.",
+            "prerequisites": [],
+            "instructor": {
+              "name": "Dr. Susan Kim",
+              "email": "susank@hawaii.edu",
+              "office": "Ka Lama 102"
+            },
+            "schedule": {
+              "days": ["Thursday"],
+              "time": "2:00 PM - 4:30 PM",
+              "location": "Online (Zoom)",
+              "capacity": 20,
+              "enrolled": 15
+            },
+            "isActive": true,
+            "topics": ["Leadership", "Decision Making", "Teamwork"],
+            "assignments": [
+              {"name": "Case Study 1", "points": 10, "dueDate": "2026-02-01"},
+              {"name": "Case Study 2", "points": 10, "dueDate": "2026-02-15"}
+            ]
+          }
+        ]
+      }
+    ]
+  }

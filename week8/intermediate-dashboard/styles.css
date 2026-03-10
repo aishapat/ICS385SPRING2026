@@ -1,0 +1,558 @@
+/* styles.css - all the styling for the dashboard */
+
+/* reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f4f8;
+    color: #2d3748;
+    min-height: 100vh;
+  }
+  
+  /* ===== HEADER ===== */
+  .dashboard-header {
+    background: linear-gradient(135deg, #1a5276, #2ecc71);
+    color: white;
+    padding: 16px 24px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+  
+  .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-content h1 {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+  
+  .header-controls {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .header-btn {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.2s;
+  }
+  
+  .header-btn:hover {
+    background: rgba(255,255,255,0.35);
+  }
+  
+  /* ===== MAIN GRID LAYOUT ===== */
+  #dashboard-container {
+    max-width: 1400px;
+    margin: 24px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* ===== STATS CARDS AT THE TOP ===== */
+  .stats-overview {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  
+  .stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    border-top: 4px solid #2ecc71;
+    transition: transform 0.2s;
+  }
+  
+  .stat-card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a5276;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ===== WIDGET STYLES ===== */
+  .dashboard-widget {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  
+  .widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f0f4f8;
+  }
+  
+  .widget-header h3 {
+    font-size: 1.1rem;
+    color: #1a5276;
+  }
+  
+  .last-updated {
+    font-size: 0.75rem;
+    color: #a0aec0;
+  }
+  
+  /* ===== WEATHER WIDGET ===== */
+  .weather-widget {
+    grid-column: 1;
+  }
+  
+  .weather-main {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+  
+  .weather-icon {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .location {
+    font-size: 0.9rem;
+    color: #718096;
+    margin-bottom: 4px;
+  }
+  
+  .temperature {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a5276;
+    line-height: 1;
+  }
+  
+  .description {
+    font-size: 0.95rem;
+    color: #4a5568;
+    text-transform: capitalize;
+    margin-top: 4px;
+  }
+  
+  .weather-details {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: #718096;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #f0f4f8;
+  }
+  
+  /* ===== HUMOR WIDGET ===== */
+  .humor-widget {
+    grid-column: 2;
+  }
+  
+  .humor-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .joke-section {
+    background: #f8fafc;
+    border-radius: 8px;
+    padding: 14px;
+    border-left: 4px solid #2ecc71;
+  }
+  
+  .joke-section h4 {
+    font-size: 0.85rem;
+    color: #1a5276;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .joke-text {
+    font-size: 0.95rem;
+    color: #4a5568;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  
+  .refresh-btn {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: background 0.2s;
+  }
+  
+  .refresh-btn:hover {
+    background: #27ae60;
+  }
+  
+  .refresh-btn:disabled {
+    background: #a0aec0;
+    cursor: not-allowed;
+  }
+  
+  /* ===== COURSE WIDGET ===== */
+  .course-widget {
+    grid-column: 1 / -1;
+  }
+  
+  .widget-controls {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .widget-controls input,
+  .widget-controls select {
+    padding: 6px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .widget-controls input:focus,
+  .widget-controls select:focus {
+    border-color: #2ecc71;
+  }
+  
+  /* grid of course cards */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  
+  .course-card {
+    background: #f8fafc;
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .course-code {
+    font-weight: 700;
+    color: #1a5276;
+    font-size: 0.9rem;
+  }
+  
+  /* color coded badge showing how full the class is */
+  .capacity-badge {
+    font-size: 0.72rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  
+  .capacity-badge.high { background: #fed7d7; color: #c53030; }
+  .capacity-badge.medium { background: #fefcbf; color: #b7791f; }
+  .capacity-badge.low { background: #c6f6d5; color: #276749; }
+  
+  .course-name {
+    font-size: 0.95rem;
+    color: #2d3748;
+    margin-bottom: 6px;
+  }
+  
+  .course-instructor,
+  .course-schedule,
+  .course-enrollment {
+    font-size: 0.82rem;
+    color: #718096;
+    margin-bottom: 4px;
+  }
+  
+  .course-dept {
+    font-size: 0.75rem;
+    color: #a0aec0;
+    margin-top: 8px;
+    font-style: italic;
+  }
+  
+  /* progress bar showing class capacity */
+  .capacity-bar {
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 2px;
+    margin-top: 8px;
+    overflow: hidden;
+  }
+  
+  .capacity-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.3s;
+  }
+  
+  .capacity-fill.high { background: #fc8181; }
+  .capacity-fill.medium { background: #f6e05e; }
+  .capacity-fill.low { background: #68d391; }
+  
+  /* ===== QUICK ACTIONS ===== */
+  .actions-widget {
+    grid-column: 1 / -1;
+  }
+  
+  .actions-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  
+  .action-btn {
+    background: linear-gradient(135deg, #1a5276, #2980b9);
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26,82,118,0.3);
+  }
+  
+  /* ===== API KEY MODAL ===== */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    width: 90%;
+    max-width: 480px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  }
+  
+  .modal-content h2 {
+    color: #1a5276;
+    margin-bottom: 8px;
+  }
+  
+  .modal-content p {
+    color: #718096;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .api-key-setup {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .api-key-setup label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #4a5568;
+  }
+  
+  .api-key-setup input {
+    padding: 10px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .api-key-setup input:focus {
+    border-color: #2ecc71;
+  }
+  
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+  
+  .save-btn {
+    flex: 1;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+  
+  .save-btn:hover {
+    background: #27ae60;
+  }
+  
+  .modal-actions button:last-child {
+    background: #e2e8f0;
+    color: #4a5568;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  /* ===== ERROR AND LOADING STATES ===== */
+  .error-state {
+    background: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-radius: 8px;
+    padding: 12px;
+    color: #c53030;
+    font-size: 0.9rem;
+  }
+  
+  .error-message {
+    font-size: 0.8rem;
+    color: #e53e3e;
+    margin-top: 8px;
+  }
+  
+  .loading {
+    text-align: center;
+    color: #a0aec0;
+    padding: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .no-results {
+    text-align: center;
+    color: #a0aec0;
+    padding: 40px;
+    grid-column: 1 / -1;
+  }
+  
+  .initialization-error {
+    text-align: center;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+  }
+  
+  .initialization-error h2 {
+    color: #c53030;
+    margin-bottom: 12px;
+  }
+  
+  .initialization-error button {
+    margin-top: 16px;
+    background: #1a5276;
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 20px;
+    color: #a0aec0;
+    font-size: 0.8rem;
+    margin-top: 20px;
+  }
+  
+  /* ===== RESPONSIVE - works on phone and tablet too ===== */
+  @media (max-width: 768px) {
+    #dashboard-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .stats-overview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .weather-widget,
+    .humor-widget,
+    .course-widget,
+    .actions-widget {
+      grid-column: 1;
+    }
+  
+    .actions-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .header-content h1 {
+      font-size: 1rem;
+    }
+  
+    .widget-controls {
+      flex-direction: column;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .stats-overview {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .actions-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }

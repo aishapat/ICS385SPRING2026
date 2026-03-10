@@ -1,0 +1,49 @@
+{
+    "departments": [
+      {
+        "id": "ICS",
+        "name": "Information & Computer Science",
+        "courses": [
+          {
+            "id": "ICS385",
+            "code": "ICS 385",
+            "name": "Web Development and Administration",
+            "instructor": "Prof. Bhattacharya",
+            "credits": 3,
+            "enrolled": 20,
+            "capacity": 25,
+            "schedule": "Online Zoom - Tue/Thu 4:30-5:45 PM",
+            "description": "Web development covering HTML, CSS, JavaScript, APIs, and server-side programming."
+          },
+          {
+            "id": "ICS360",
+            "code": "ICS 360",
+            "name": "Database Design and Development",
+            "instructor": "Prof. Domingo",
+            "credits": 3,
+            "enrolled": 18,
+            "capacity": 25,
+            "schedule": "Online - No Class Meeting",
+            "description": "Introduction to database design and development using Python and MySQL."
+          }
+        ]
+      },
+      {
+        "id": "BUS",
+        "name": "Business",
+        "courses": [
+          {
+            "id": "BUS320",
+            "code": "BUS 320",
+            "name": "Entrepreneurship",
+            "instructor": "Prof. Domingo",
+            "credits": 3,
+            "enrolled": 22,
+            "capacity": 30,
+            "schedule": "Online - No Class Meeting",
+            "description": "Introduction to entrepreneurship, business planning, and startup concepts."
+          }
+        ]
+      }
+    ]
+  }

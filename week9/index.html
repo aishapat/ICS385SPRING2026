@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawaii Weather</title>
+  
+  <!-- Basic styling for the weather card -->
+  <style>
+    /* page layout */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    /* weather card styling */
+    .weather-card {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    h1 {
+      color: #1a5276;
+      margin-bottom: 8px;
+      font-size: 1.4rem;
+    }
+
+    .location {
+      color: #718096;
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .weather-icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .temperature {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #1a5276;
+    }
+
+    .description {
+      font-size: 1rem;
+      color: #4a5568;
+      text-transform: capitalize;
+      margin-bottom: 16px;
+    }
+
+    .details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 16px;
+      border-top: 1px solid #f0f4f8;
+      padding-top: 16px;
+    }
+
+    .detail-item {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .detail-label {
+      font-size: 0.75rem;
+      color: #a0aec0;
+      text-transform: uppercase;
+    }
+
+    .detail-value {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #2d3748;
+    }
+
+    .error {
+      color: #e53e3e;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Weather card container -->
+  <div class="weather-card">
+    <h1>Hawaii Weather</h1>
+    <div id="weather-content">
+      <!-- Weather info will appear here -->
+      <p>Loading weather...</p>
+    </div>
+  </div>
+
+  <!-- Link to your JavaScript that fetches the weather -->
+  <script src="weather.js"></script>
+
+</body>
+</html>

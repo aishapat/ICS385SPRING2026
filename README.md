@@ -8,5 +8,5 @@ Used Mongoose to create Hotel and Amenities schemas. Ran CRUD operations on both
 
 # Week 11 - Term Project Update
 
-Added a Review schema to the Property model and built Express routes for Luminous Stays. Created a basic EJS template to list all properties and tested all routes in Postman.
+Added a Review schema to the Property model and built Express routes for Luminous Stays. I created a basic EJS template to list all the properties and also tested all routes in Postman.
 

@@ -1,1 +1,12 @@
-<img width="1440" height="900" alt="Screenshot 2026-03-29 at 8 37 16 PM" src="https://github.com/user-attachments/assets/0b801450-2a48-45ac-8ddb-77561788c2e3" />
+# Week 11 - PyMongo CRUD
+
+Used PyMongo to connect to MongoDB Atlas and perform basic CRUD operations on a Customer collection. Inserted 3 customer records, updated emails and phone numbers.
+
+# Week 11 - Mongoose CRUD
+
+Used Mongoose to create Hotel and Amenities schemas. Ran CRUD operations on both my local MongoDB and MongoDB Atlas.
+
+# Week 11 - Term Project Update
+
+Added a Review schema to the Property model and built Express routes for Luminous Stays. Created a basic EJS template to list all properties and tested all routes in Postman.
+

@@ -22,4 +22,11 @@ I built a React application using Vite that displays three Hawaiian island cards
 5. Open http://localhost:5173 in your browser  
 
 ## AI Tools Used
-Claude (Anthropic) was used to help with component structure and styling.
+Claude was used to help with component structure and styling.
+
+# HW12-B -PRD Document
+
+This is the PRD for Luminous Stays, my Maui vacation rental web application. It outlines the project overview, user personas, marketing page requirements, component hierarchy, data flow, and acceptance criteria.
+
+## AI Tools Used
+- Claude was used to support understanding and organizing. The project concept and decisions are my own.

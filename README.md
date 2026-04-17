@@ -1,26 +1,21 @@
-# week12- Luminous Stays React Marketing Page
+# HW13-A - Hawaii Island Cards with Filter
 
-## what I Built
-A react marketing page for Luminous Stays, its a luxury oceanfront vacation rental brand in Wailea, Maui.
-The page includes a Hero section with a real Maui beach background image, an About section descrbing the property, an Amenities section showing key feautres, an Attractions section highlighting popular Maui Spots, a CTA section encouraging bookings, and a Footer.
+## What I Built
+I added onto the Week 12 Island Cards app and made it data-driven using React props, `.map()`, `.filter()`, and `.reduce()`. I also added a dropdown filter so users can view islands by region and see the total visitor count.
 
-## component built
-- Header: navigation bar with sky blue tropical theme
-- Hero: full width beach background image with property name and tagline
-- About: 6 amenities rendered using .map()
-- Attractions: 4 Maui attractions with descriptions that I researched 
-- CTASection: booking call to action with sunset orange bacgkround
-- Footer: contact info and copyright
+## Key Concepts Used
+- Props to pass island data into the `IslandCard` component
+- `.map()` to show all island cards
+- `.filter()` to sort islands by region (All, Central, North, South)
+- `.reduce()` to add up total visitors from the filtered islands
+- `useState` to keep track of the selected filter
 
-## decisions made
-I chose a tropical color scheme with sky blue, white, and sunset orange to match the Maui beach vibe. I used a real unsplash beach photo for the hero background. I wrote the attraction description myself based on my own knowledge of Maui.
+## How to Run
+1. Clone the repo
+2. Go to `week13/hw13a-island-cards`
+3. Run `npm install`
+4. Run `npm run dev`
+5. Open `http://localhost:5173`
 
-## how to run
-1. clone the repo
-2. cd into week12/term-project
-3. Run npm install
-4. Run npm run dev
-5. Open http://localhost:5173
-
-## AI tools used
-Claude was used to help with component structure and styling. All content, descriptions, and design decisions are my own.
+## AI Tools Used
+Claude helped with the component layout and filter logic.

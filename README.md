@@ -19,3 +19,6 @@ I added onto the Week 12 Island Cards app and made it data-driven using React pr
 
 ## AI Tools Used
 Claude helped with the component layout and filter logic.
+
+# HW13-B - PRD v2.0
+I updated the Product Requirements Document to include the Visitor Statistics Dashboard design, Island Selector UX, Weather Widget, and Data Architecture sections. Also updated Acceptance Criteria with measurable time metrics.

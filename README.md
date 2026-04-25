@@ -24,3 +24,6 @@ bcrypt is a hashing function that converts a plain text password into a secure, 
 
 ## AI Tools Used
 Claude (Anthropic) assisted with code structure and debugging. All design decisions are my own.
+
+### HW14-C - PRD v3.0
+Updated PRD with authentication and security requirements including Passport.js LocalStrategy, bcrypt hashing, and user stories.

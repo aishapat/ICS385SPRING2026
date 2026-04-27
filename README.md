@@ -27,3 +27,35 @@ Claude (Anthropic) assisted with code structure and debugging. All design decisi
 
 ### HW14-C - PRD v3.0
 Updated PRD with authentication and security requirements including Passport.js LocalStrategy, bcrypt hashing, and user stories.
+
+# Week 14D - Luminous Stays Admin Login
+
+## What I Built
+Added admin authentication to the Luminous Stays term project using Passport.js LocalStrategy and bcrypt. The admin can log in with email and password, access a protected dashboard showing all properties, and log out securely.
+
+## Admin Credentials
+- Email: admin@luminousstays.com
+- Password: stored securely as bcrypt hash in MongoDB Atlas
+
+## New Files Added
+- models/User.js - admin user schema
+- passport-config.js - Passport LocalStrategy configuration
+- middleware/isAuthenticated.js - route guard for protected pages
+- routes/auth.js - login and logout routes
+- routes/admin.js - protected admin dashboard
+- seed-admin.js - run once to create admin account
+
+## How to Run
+1. Clone the repo
+2. cd into week14/term-project
+3. Run npm install
+4. Create .env with MONGO_URI and SESSION_SECRET
+5. Run node seed-admin.js to create admin account
+6. Run node app.js
+7. Go to http://localhost:3000/admin/login
+
+## Challenge
+Setting up Passport.js session management with the Express app took some attention to middleware order. The session middleware had to come before passport.initialize() and passport.session() for everything to work properly.
+
+## AI Tools Used
+Claude (Anthropic) assisted with code structure and debugging. All design decisions are my own.

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luminous Stays - Properties</title>
+</head>
+<body>
+    <h1>Luminous Stays - Maui Properties</h1>
+
+    <% properties.forEach(function(prop) { %>
+        <div>
+            <h2><%= prop.name %></h2>
+            <p>Island: <%= prop.island %></p>
+            <p>Type: <%= prop.type %></p>
+            <p><%= prop.description %></p>
+            <p>Reviews: <%= prop.reviews.length %></p>
+            <a href="/properties/<%= prop._id %>">View Details</a>
+        </div>
+        <hr>
+    <% }); %>
+</body>
+</html>

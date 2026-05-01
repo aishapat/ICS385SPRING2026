@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luminous Stays - Sign In</title>
+  <style>
+    body { font-family: sans-serif; background: #e0f4ff; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 360px; text-align: center; }
+    h1 { color: #0096c7; font-size: 24px; margin-bottom: 8px; }
+    p { color: #555; margin-bottom: 24px; }
+    .google-btn { display: inline-block; background: #0096c7; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: 600; }
+    .google-btn:hover { background: #0077b6; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Luminous Stays</h1>
+    <p>Admin Portal — Sign in to manage your properties</p>
+    <% if (!user) { %>
+      <a href="/auth/google" class="google-btn">Sign in with Google</a>
+    <% } else { %>
+      <p>Welcome back, <%= user.displayName %>!</p>
+      <a href="/profile" class="google-btn">Go to Profile</a>
+    <% } %>
+  </div>
+</body>
+</html>

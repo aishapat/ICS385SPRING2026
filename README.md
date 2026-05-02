@@ -17,3 +17,6 @@ That said, it did come with some extra setup. I had to create an OAuth client in
 
 ## AI Tools Used
 Claude (Anthropic) assisted with code structure and debugging. All design decisions are my own.
+
+### HW15-B - PRD v3.0
+Final PRD update with Google OAuth requirements, acceptance criteria, and Jest test scripts.

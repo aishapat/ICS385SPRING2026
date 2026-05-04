@@ -1,3 +1,10 @@
+
+
+# Luminous Stays — Maui Luxury Vacation Rental
+**Live URL:** https://luminous-stays.onrender.com
+**GitHub:** https://github.com/aishapat/ICS385SPRING2026
+
+
 # HW15-A - Google OAuth 2.0 with Passport.js
 
 ## What I Built
@@ -20,3 +27,4 @@ Claude (Anthropic) assisted with code structure and debugging. All design decisi
 
 ### HW15-B - PRD v3.0
 Final PRD update with Google OAuth requirements, acceptance criteria, and Jest test scripts.
+

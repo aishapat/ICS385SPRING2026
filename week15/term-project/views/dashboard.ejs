@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luminous Stays - Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; background: #e0f4ff; }
+    header { background: #0096c7; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; }
+    header h1 { color: white; font-size: 22px; }
+    nav a { color: white; text-decoration: none; margin-left: 24px; font-size: 15px; }
+    .container { padding: 40px; max-width: 1200px; margin: 0 auto; }
+    .weather { background: #0096c7; border-radius: 12px; padding: 20px; margin-bottom: 32px; color: white; text-align: center; }
+    .weather h3 { margin-bottom: 8px; }
+    .weather-data { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .selector { margin-bottom: 32px; text-align: center; }
+    select { padding: 8px 16px; border-radius: 8px; border: 2px solid #0096c7; font-size: 15px; color: #003566; cursor: pointer; }
+    .chart-box { background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; }
+    .chart-box h2 { color: #003566; margin-bottom: 16px; }
+    .charts-row { display: flex; gap: 24px; flex-wrap: wrap; }
+    .charts-row .chart-box { flex: 1; min-width: 300px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luminous Stays</h1>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/login">Admin</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1 style="color:#003566; text-align:center; margin-bottom:8px;">Maui Visitor Statistics</h1>
+    <p style="color:#0096c7; text-align:center; margin-bottom:32px;">Real DBEDT Hawaii Tourism Data 2021-2024</p>
+
+    <!-- Weather Widget -->
+    <div class="weather">
+      <h3>Current Weather — Wailea, Maui</h3>
+      <div class="weather-data" id="weather">Loading weather...</div>
+    </div>
+
+    <!-- Island Selector -->
+    <div class="selector">
+      <label style="color:#003566; font-size:16px; margin-right:12px;">Select Island:</label>
+      <select id="islandSelect">
+        <option value="Maui">Maui</option>
+        <option value="Oahu">Oahu</option>
+        <option value="Kauai">Kauai</option>
+        <option value="Big Island">Big Island</option>
+      </select>
+    </div>
+
+    <!-- Bar Chart -->
+    <div class="chart-box">
+      <h2>Visitor Arrivals by Month — <span id="islandLabel">Maui</span></h2>
+      <canvas id="barChart"></canvas>
+    </div>
+
+    <!-- Pie and Line Charts -->
+    <div class="charts-row">
+      <div class="chart-box">
+        <h2>Visitor Types</h2>
+        <canvas id="pieChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h2>Average Length of Stay</h2>
+        <canvas id="lineChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // tourism data
+    const tourismData = [
+      63865,90891,167753,175023,212018,255516,275483,224757,166489,180433,183764,208172,
+      165134,173088,205103,222524,219899,261835,264019,225131,188755,191850,185936,214172,
+      189892,182505,227275,208518,210438,246098,252722,93652,76769,112043,128877,162625,
+      141834,147603,176153,150961,159592,194878,205621,170920,143043,154629,163898,193910
+    ];
+
+    const months = [];
+    const years = [2021,2022,2023,2024];
+    const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    years.forEach(y => monthNames.forEach(m => months.push(m + ' ' + y)));
+
+    // bar chart
+    const barChart = new Chart(document.getElementById('barChart'), {
+      type: 'bar',
+      data: {
+        labels: months,
+        datasets: [{ label: 'Visitor Arrivals - Maui', data: tourismData, backgroundColor: '#0096c7', borderRadius: 4 }]
+      },
+      options: { responsive: true }
+    });
+
+    // pie chart
+    new Chart(document.getElementById('pieChart'), {
+      type: 'pie',
+      data: {
+        labels: ['Vacation Rental', 'Hotel', 'Condo', 'Other'],
+        datasets: [{ data: [35,45,15,5], backgroundColor: ['#0096c7','#ff6b35','#48cae4','#90e0ef'] }]
+      },
+      options: { responsive: true }
+    });
+
+    // line chart
+    new Chart(document.getElementById('lineChart'), {
+      type: 'line',
+      data: {
+        labels: ['2021','2022','2023','2024'],
+        datasets: [{ label: 'Avg Length of Stay (days)', data: [8.2,9.1,8.7,9.3], borderColor: '#ff6b35', backgroundColor: 'rgba(255,107,53,0.1)', tension: 0.4, fill: true }]
+      },
+      options: { responsive: true }
+    });
+
+    // island selector
+    document.getElementById('islandSelect').addEventListener('change', function() {
+      document.getElementById('islandLabel').textContent = this.value;
+    });
+
+    // weather widget
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=Wailea,Maui,US&appid=8773ec9a78c3039283cab768c19186c5&units=imperial')
+      .then(res => res.json())
+      .then(data => {
+        if (data.main) {
+          document.getElementById('weather').innerHTML = `
+            <div><strong>${Math.round(data.main.temp)}°F</strong><p>Temperature</p></div>
+            <div><strong>${data.weather[0].description}</strong><p>Conditions</p></div>
+            <div><strong>${data.main.humidity}%</strong><p>Humidity</p></div>
+          `;
+        }
+      })
+      .catch(() => {
+        document.getElementById('weather').innerHTML = 'Weather data unavailable';
+      });
+  </script>
+</body>
+</html>

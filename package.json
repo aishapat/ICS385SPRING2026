@@ -1,7 +1,37 @@
 {
   "dependencies": {
+    "bcrypt": "^6.0.0",
     "chart.js": "^4.5.1",
     "connect-mongo": "^3.2.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.1.0",
+    "mongoose": "^9.6.1",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "passport-local": "^1.0.0",
     "react-chartjs-2": "^5.3.1"
-  }
+  },
+  "name": "ics385spring2026",
+  "version": "1.0.0",
+  "description": "A standalone Express application that demonstrates Google OAuth 2.0 authentication using passport-google-oauth20. Users can sign in with their Google account, view their profile page showing their email and Mongoose ID, and log out securely.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aishapat/ICS385SPRING2026.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/aishapat/ICS385SPRING2026/issues"
+  },
+  "homepage": "https://github.com/aishapat/ICS385SPRING2026#readme"
 }

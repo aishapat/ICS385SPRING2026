@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luminous Stays - Register</title>
+  <style>
+    body { font-family: sans-serif; background: #e0f4ff; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .card { background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 360px; text-align: center; }
+    h1 { color: #0096c7; font-size: 24px; margin-bottom: 8px; }
+    p { color: #555; margin-bottom: 24px; }
+    label { display: block; text-align: left; color: #333; margin-bottom: 4px; font-size: 14px; }
+    input { width: 100%; padding: 10px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; box-sizing: border-box; }
+    .btn { width: 100%; padding: 12px; background: #0096c7; color: white; border: none; border-radius: 8px; font-size: 16px; cursor: pointer; }
+    .error { color: red; font-size: 13px; margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Luminous Stays</h1>
+    <p>Create Admin Account</p>
+    <% if (error) { %>
+      <p class="error"><%= error %></p>
+    <% } %>
+    <form action="/register" method="POST">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="admin@luminousstays.com" required/>
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Minimum 8 characters" required/>
+      <button class="btn" type="submit">Register</button>
+    </form>
+    <p style="font-size:13px; color:#555; margin-top:16px;">Already have an account? <a href="/login">Login</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luminous Stays - Maui Luxury Vacation Rental</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: sans-serif; }
+    header { background: #0096c7; padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+    header h1 { color: white; font-size: 22px; }
+    nav a { color: white; text-decoration: none; margin-left: 24px; font-size: 15px; }
+    .hero { background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1600'); background-size: cover; background-position: center; min-height: 90vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 60px 20px; position: relative; }
+    .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,100,150,0.45); }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-content p { color: #caf0f8; font-size: 16px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 16px; }
+    .hero-content h1 { color: white; font-size: 56px; font-weight: 700; margin-bottom: 16px; }
+    .hero-content h3 { color: #caf0f8; font-size: 20px; margin-bottom: 40px; }
+    .btn { background: #ff6b35; color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; }
+    .section { padding: 80px 40px; text-align: center; }
+    .section h2 { color: #0096c7; font-size: 36px; margin-bottom: 20px; }
+    .divider { width: 60px; height: 4px; background: #ff6b35; margin: 0 auto 40px; }
+    .about { background: white; }
+    .about p { color: #333; font-size: 18px; max-width: 700px; margin: 0 auto 20px; line-height: 1.8; }
+    .stats { display: flex; justify-content: center; gap: 40px; margin-top: 50px; flex-wrap: wrap; }
+    .stat h3 { color: #0096c7; font-size: 32px; margin: 0; }
+    .stat p { color: #555; margin: 4px 0 0; }
+    .amenities { background: #e8f4f8; }
+    .amenities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 800px; margin: 0 auto; }
+    .amenity-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .amenity-card img { width: 100%; height: 140px; object-fit: cover; }
+    .amenity-card p { color: #333; font-size: 15px; margin: 14px 0; font-weight: 500; }
+    .attractions { background: white; }
+    .attractions-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; max-width: 1100px; margin: 0 auto; }
+    .attraction-card { background: white; border-radius: 12px; width: 240px; text-align: left; box-shadow: 0 4px 12px rgba(0,0,0,0.1); overflow: hidden; }
+    .attraction-card img { width: 100%; height: 160px; object-fit: cover; }
+    .attraction-card-body { padding: 16px; }
+    .attraction-card-body h3 { color: #0096c7; font-size: 16px; margin-bottom: 8px; }
+    .attraction-card-body p { color: #555; font-size: 13px; line-height: 1.6; margin: 0; }
+    .cta { background: #ff6b35; }
+    .cta h2 { color: white; font-size: 40px; margin-bottom: 16px; }
+    .cta p { color: #fff3ee; font-size: 18px; max-width: 600px; margin: 0 auto 40px; line-height: 1.8; }
+    .cta a { background: white; color: #ff6b35; padding: 16px 48px; border-radius: 50px; text-decoration: none; font-size: 18px; font-weight: 600; }
+    footer { background: #0096c7; padding: 40px; text-align: center; }
+    footer h3 { color: white; font-size: 20px; margin-bottom: 12px; }
+    footer p { color: #caf0f8; font-size: 14px; margin-bottom: 8px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Luminous Stays</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#amenities">Amenities</a>
+      <a href="#attractions">Attractions</a>
+      <a href="/dashboard">Dashboard</a>
+      <a href="/login">Admin</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p>Wailea, Maui, Hawaii</p>
+      <h1>Luminous Stays</h1>
+      <h3>Your luxury oceanfront escape in the heart of Maui</h3>
+      <a href="mailto:luminousstays@hawaii.com" class="btn">Book Your Stay</a>
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="section about" id="about">
+    <h2>About Luminous Stays</h2>
+    <div class="divider"></div>
+    <p>Luminous Stays is a collection of oceanfront vacation rentals located in Wailea, Maui. Our spaces are designed to offer comfort, privacy, and a peaceful stay right by the ocean.</p>
+    <p>Whether you're visiting for a honeymoon, anniversary, or a quiet break from everyday life, our goal is to give you a simple, relaxing, and memorable experience in Maui.</p>
+    <div class="stats">
+      <div class="stat"><h3>5</h3><p>Stays</p></div>
+      <div class="stat"><h3>5★</h3><p>Guest Rating</p></div>
+      <div class="stat"><h3>Maui</h3><p>Hawaiʻi</p></div>
+    </div>
+  </div>
+
+  <!-- Amenities -->
+  <div class="section amenities" id="amenities">
+    <h2>Amenities</h2>
+    <div class="divider"></div>
+    <div class="amenities-grid">
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=300" alt="Full Kitchen"/>
+        <p>Full Kitchen</p>
+      </div>
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1575429198097-0414ec08e8cd?w=300" alt="Pool"/>
+        <p>Pool</p>
+      </div>
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=300" alt="Gym"/>
+        <p>Gym</p>
+      </div>
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=300" alt="WiFi"/>
+        <p>WiFi</p>
+      </div>
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=300" alt="Parking"/>
+        <p>Parking</p>
+      </div>
+      <div class="amenity-card">
+        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?w=300" alt="Laundry"/>
+        <p>Laundry</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Attractions -->
+  <div class="section attractions" id="attractions">
+    <h2>Explore Maui</h2>
+    <div class="divider"></div>
+    <div class="attractions-grid">
+      <div class="attraction-card">
+        <img src="https://images.unsplash.com/photo-1548708871-abcf5b75ea1f?w=400" alt="Road to Hana"/>
+        <div class="attraction-card-body">
+          <h3>Road to Hana</h3>
+          <p>A long, winding drive through Maui's east side with rainforests, waterfalls, and ocean views.</p>
+        </div>
+      </div>
+      <div class="attraction-card">
+        <img src="https://images.unsplash.com/photo-1633474601643-a321174fd8fd?w=400" alt="Haleakala"/>
+        <div class="attraction-card-body">
+          <h3>Haleakalā National Park</h3>
+          <p>Watch the sunrise from the summit of a dormant volcano above the clouds.</p>
+        </div>
+      </div>
+      <div class="attraction-card">
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400" alt="Wailea Beach"/>
+        <div class="attraction-card-body">
+          <h3>Wailea Beach</h3>
+          <p>A calm, golden sand beach in South Maui with clear, warm water perfect for swimming.</p>
+        </div>
+      </div>
+      <div class="attraction-card">
+        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Local Food"/>
+        <div class="attraction-card-body">
+          <h3>Maui Local Food</h3>
+          <p>Poke, loco moco, spam musubi, kalua pork — the best local flavors Maui has to offer.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section cta" id="contact">
+    <h2>Your Maui stay is waiting</h2>
+    <p>A comfortable place to stay with ocean views, privacy, and easy access to the island. We would love to host you.</p>
+    <a href="mailto:luminousstays@hawaii.com">Book Your Stay</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <h3>Luminous Stays</h3>
+    <p>Wailea, Maui, Hawaiʻi</p>
+    <p>luminousstays@hawaii.com</p>
+    <p style="margin-top:12px; font-size:11px;">© 2026 Luminous Stays. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
